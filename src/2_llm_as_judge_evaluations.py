@@ -126,7 +126,7 @@ if __name__ == "__main__":
     output_file = "judge_evaluations.csv"
     load_dotenv()
     open_ai_api_key = os.getenv("OPENAI_API_KEY")
-    print ("Got the key from .env file: ", open_ai_api_key)
+    #print ("Got the key from .env file: ", open_ai_api_key)
     
     mock_data = [
         {
@@ -140,6 +140,15 @@ if __name__ == "__main__":
             "prompt": "When did Project Orion launch?",
             "context": "Project Orion launched on March 14, 2025.",
             "student_answer": "It launched in December of 2025."
+        },
+        {
+                    "route_destination": "travel_agent",
+                    "prompt": "What is the cost to travel to Europe from India this month?",
+                    "context": """The cost to travel to Europe from India is approximately $500. However
+                    since the cost of travel can vary based on the time of year, airline, and other factors,
+                      it is recommended to check with travel agencies or online booking platforms for the most 
+                      accurate and up-to-date pricing. If its November cost is $600.""",
+                    "student_answer": "It costs around $500 to travel to Europe from India."
         }
     ]
     
