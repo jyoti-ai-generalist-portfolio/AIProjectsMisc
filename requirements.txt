@@ -28,3 +28,5 @@ llama-index
 python-dotenv
 llama-index-core
 llama-index-embeddings-huggingface
+langchain-experimental
+chonkie
