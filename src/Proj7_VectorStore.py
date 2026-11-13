@@ -1,6 +1,7 @@
 # Class to manage the vector store in ChromaDB, store documents and retrieve results
 import chromadb
 import logging
+from typing import Optional, Any
 
 class VectorStore:
     def __init__(self, persistent_directory: str = "chroma_book_store"):

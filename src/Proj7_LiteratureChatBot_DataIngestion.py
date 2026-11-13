@@ -37,12 +37,18 @@ def chunk_documents(documents: list[Any]) -> list[Any]:
         chunk_idx = 0
         for chunk in chunks:
             #print (f"{doc.metadata["source"]}_{chunk_idx}")
+            metadata = dict(doc.metadata)
+
+            metadata.update({
+                "chunk_index": chunk_idx,
+                "start_index": chunk.start_index,
+                "end_index": chunk.end_index
+            })
+
             all_chunks.append({ 
                             "id": f"{doc.metadata["source"]}_{chunk_idx}",
                             "text":chunk.text,
-                           "metadata": doc.metadata,
-                            "start_index": chunk.start_index,
-                            "end_index": chunk.end_index          
+                           "metadata": metadata         
                 })
             chunk_idx = chunk_idx + 1
 

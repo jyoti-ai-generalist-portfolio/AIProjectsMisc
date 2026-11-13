@@ -30,3 +30,5 @@ llama-index-core
 llama-index-embeddings-huggingface
 langchain-experimental
 chonkie
+langchain-chroma
+langchain-google-genai
